@@ -1,0 +1,6 @@
+#android studio ¿ÉºöÂÔÎÄ¼ş
+*.iml
+build
+*.idea
+*.gradle
+local.properties

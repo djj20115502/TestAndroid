@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@drawable/global_bg"
+             tools:context="com.konka.testdemo.TestActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/goodsid"
+            style="@style/Text2"
+            android:layout_alignBottom="@+id/goodsid_label"
+            android:layout_toRightOf="@+id/goodsid_label"
+            android:ems="10"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/goodsName_label"
+            style="@style/ShowText"
+            android:layout_alignLeft="@+id/goodsid_label"
+            android:layout_below="@+id/goodsid_label"
+            android:text="商品名称goodsName(32):"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <EditText
+            android:id="@+id/goodsName"
+            style="@style/Text2"
+            android:layout_alignBottom="@+id/goodsName_label"
+            android:layout_toRightOf="@+id/goodsName_label"
+            android:ems="10"
+            android:inputType="text"/>
+
+        <TextView
+            android:id="@+id/cpOrderId_label"
+            style="@style/ShowText"
+            android:layout_alignLeft="@+id/goodsName_label"
+            android:layout_below="@+id/goodsName_label"
+            android:text="商户订单号cpOrderId(64):"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <EditText
+            android:id="@+id/cpOrderId"
+            style="@style/Text2"
+            android:layout_alignBottom="@+id/cpOrderId_label"
+            android:layout_toRightOf="@+id/cpOrderId_label"
+            android:ems="20"
+            android:inputType="number"/>
+
+        <TextView
+            android:id="@+id/price_label"
+            style="@style/ShowText"
+            android:layout_alignLeft="@+id/cpOrderId_label"
+            android:layout_below="@+id/cpOrderId_label"
+            android:text="支付金额price(Float(6,2)):"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <EditText
+            android:id="@+id/price"
+            style="@style/Text2"
+            android:layout_alignBottom="@+id/price_label"
+            android:layout_toRightOf="@+id/price_label"
+            android:ems="10"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/payAmount_label"
+            style="@style/ShowText"
+            android:layout_alignLeft="@+id/price_label"
+            android:layout_below="@+id/price_label"
+            android:text="购买数量payAmount(Int(9)):"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <EditText
+            android:id="@+id/payAmount"
+            style="@style/Text2"
+            android:layout_alignBottom="@+id/payAmount_label"
+            android:layout_toRightOf="@+id/payAmount_label"
+            android:ems="10"
+            android:inputType="number"/>
+
+
+        <TextView
+            android:id="@+id/userid_label"
+            style="@style/ShowText"
+            android:layout_alignLeft="@+id/payAmount_label"
+            android:layout_below="@+id/payAmount_label"
+            android:text="用户ID(String(32)):"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <EditText
+            android:id="@+id/userid"
+            style="@style/Text2"
+            android:layout_alignBottom="@+id/userid_label"
+            android:layout_toRightOf="@+id/userid_label"
+            android:ems="10"
+            android:inputType="number"/>
+
+
+        <Button
+            android:id="@+id/make_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/userid_label"
+            android:layout_below="@+id/userid_label"
+            android:layout_marginTop="56dp"
+            android:background="@drawable/normal_button_bg"
+            android:text="按要求生成订单"/>
+
+        <TextView
+            android:id="@+id/order"
+            android:layout_width="500dp"
+            android:layout_height="400dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="#8B7D7B"
+            android:text="订单具体信息"/>
+
+        <TextView
+            android:id="@+id/pay_return"
+            android:layout_width="500dp"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="20dp"
+            android:background="#ABABAB"
+            android:text="支付返回结果"/>
+
+        <Button
+            android:id="@+id/button_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/order"
+            android:layout_marginEnd="192dp"
+            android:layout_marginRight="371dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/normal_button_bg"
+            android:text="确认支付"/>
+
+        <TextView
+            android:id="@+id/goodsid_label"
+            style="@style/ShowText"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="26dp"
+            android:layout_marginStart="96dp"
+            android:layout_marginTop="122dp"
+            android:text="商品编号goodsId(String(20):"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <Button
+            android:id="@+id/random_make_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/make_order"
+            android:layout_alignBottom="@+id/make_order"
+            android:layout_alignEnd="@+id/price"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/normal_button_bg"
+            android:text="随机生成订单"/>
+
+        <Button
+            android:id="@+id/use_konka"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/random_make_order"
+            android:layout_marginStart="33dp"
+            android:layout_toEndOf="@+id/goodsName"
+            android:background="@drawable/normal_button_bg"
+            android:text="使用康佳用户系统"/>
+    </RelativeLayout>
+
+</FrameLayout>

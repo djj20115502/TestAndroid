@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/activity_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.konka.kkuserpay.MainActivity">
+
+    <Button
+        android:id="@+id/get_login_qrCode_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="50dp"
+        android:text="获取登录二维码"/>
+    <Button
+        android:id="@+id/get_modify_qrCode_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_toRightOf="@id/get_login_qrCode_btn"
+        android:text="获取修改二维码"/>
+    <Button
+        android:id="@+id/get_userInfo_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/get_login_qrCode_btn"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/get_modify_qrCode_btn"
+        android:text="获取用户信息"/>
+
+    <Button
+        android:id="@+id/watch_qrCode_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/get_userInfo_btn"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/get_userInfo_btn"
+        android:text="监听登录"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/unwatch_qrCode_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/watch_qrCode_btn"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/watch_qrCode_btn"
+        android:text="取消监听"
+        android:visibility="gone"/>
+    <Button
+        android:id="@+id/get_token_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/avatar_iv"
+        android:layout_marginLeft="20dp" android:layout_marginStart="24dp"
+        android:layout_toEndOf="@+id/get_userInfo_btn"
+        android:text="获取access token" android:visibility="gone"/>
+    <Button
+        android:id="@+id/logout_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/get_login_qrCode_btn"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/get_token_btn"
+        android:text="退出登录"/>
+
+    <ImageView
+        android:id="@+id/qrCode_iv"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_below="@id/get_login_qrCode_btn"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/error_konka_bg"/>
+
+    <ImageView
+        android:id="@+id/avatar_iv"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_below="@id/get_login_qrCode_btn"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_toRightOf="@id/qrCode_iv"
+        android:background="@drawable/error_konka_bg"
+        android:scaleType="fitXY"/>
+    <TextView
+        android:id="@+id/openid_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/avatar_iv"
+        android:layout_marginLeft="50dp"
+        android:layout_toRightOf="@id/avatar_iv"
+        android:text="openid"
+        android:textSize="22sp"/>
+    <TextView
+        android:id="@+id/username_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/openid_tv"
+        android:layout_below="@id/openid_tv"
+        android:layout_marginTop="100dp"
+        android:layout_toRightOf="@id/avatar_iv"
+        android:text="用户名"
+        android:textSize="22sp"/>
+</RelativeLayout>

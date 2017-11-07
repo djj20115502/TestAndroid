@@ -1,0 +1,42 @@
+<manifest package="com.konka.kkuserpaydemo"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+        <activity
+            android:name="com.konka.testdemo.TestActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.konka.tvpay.pay.PayActivity"
+            android:process=":tvpay"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="com.konka.tvpay.pay.PayActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <!--<activity-->
+            <!--android:name="com.konka.testdemo.usersystem.MainActivity"-->
+            <!--android:theme="@style/ThemeActivity">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.konka.testdemo.usersystem.MainActivity"/>-->
+                <!--<category android:name="android.intent.category.DEFAULT"/>-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+    </application>
+
+</manifest>
