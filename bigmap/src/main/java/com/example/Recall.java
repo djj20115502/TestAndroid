@@ -6,11 +6,12 @@ import java.util.ArrayList;
  * Created by DongJunJie on 2017-11-2.
  *
  *
+ * 回溯法
  * 这个方法比较耗时，但是却是必然不会有错误的一种算法
  *
  */
 
-public class T2 {
+public class Recall {
 
 
     static int max = 0;

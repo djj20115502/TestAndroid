@@ -6,9 +6,11 @@ import java.util.ArrayList;
  * Created by DongJunJie on 2017-11-3.
  * <p>
  * 尝试动态规划
+ *
+ * 结果显示动态规划实际上是不可行的方案
  */
 
-public class D {
+public class Dp {
     public static void dd(int[][] map) {
         int len = map.length;
         ArrayList<Integer> add;

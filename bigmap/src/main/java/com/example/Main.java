@@ -14,6 +14,10 @@ import java.util.concurrent.Executors;
 
 /**
  * Created by DongJunJie on 2017-9-4.
+ * <p>
+ * 主要解法，一个尝试性的启发式算法，贪婪算法
+ * <p>
+ * 主要2步。1 找到临时最大团，2 找到符合交换的点
  */
 
 public class Main {
@@ -544,7 +548,6 @@ public class Main {
                     String[] sa = tempString.split(" ");
                     p1 = getInt(sa[0]) - 1;
                     p2 = getInt(sa[1]) - 1;
-
                     rt[p1][p2] = 1;
                     rt[p2][p1] = 1;
                 }
